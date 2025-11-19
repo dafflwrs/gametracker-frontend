@@ -1,0 +1,156 @@
+/* Contenedor general y fondo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1e1e2f;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #2a2a3f;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+h1 {
+  text-align: center;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+form input, form select, form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  flex: 1 1 180px;
+  font-size: 14px;
+}
+
+form textarea {
+  flex: 1 1 100%;
+  resize: vertical;
+  min-height: 60px;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffcc00;
+  color: #1e1e2f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #e6b800;
+}
+
+/* Lista de juegos */
+#gamesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjetas de juego */
+.game-card {
+  background: #3a3a5a;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.game-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Encabezado */
+.game-card h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #ffcc00;
+  text-align: center;
+}
+
+/* Bloques de información */
+.info-block {
+  display: flex;
+  justify-content: space-between;
+  background: #2a2a3f;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  align-items: center;
+}
+
+.info-block span {
+  font-weight: bold;
+}
+
+/* Reseña */
+.review-block {
+  background: #2a2a3f;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+/* Botones */
+.delete-btn, .edit-btn {
+  position: absolute;
+  top: 8px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn {
+  right: 8px;
+  background: red;
+}
+.delete-btn:hover {
+  background: darkred;
+}
+
+.edit-btn {
+  left: 8px;
+  background: #00bfff;
+}
+.edit-btn:hover {
+  background: #0099cc;
+}

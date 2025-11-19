@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 Game Tracker</h1>
+
+    <form id="gameForm">
+      <input type="text" id="gameName" placeholder="Nombre del juego" required>
+      <input type="file" id="gameImage" accept="image/*">
+      <input type="number" id="gameHours" placeholder="Horas jugadas" min="0">
+      <input type="number" id="gameScore" placeholder="Puntuación (0-10)" min="0" max="10">
+      <textarea id="gameReview" placeholder="Reseña del juego"></textarea>
+      <select id="gameStatus">
+        <option value="pendiente">Pendiente</option>
+        <option value="jugando">Jugando</option>
+        <option value="completado">Completado</option>
+      </select>
+      <button type="submit">Agregar Juego</button>
+    </form>
+
+    <div id="gamesList"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
